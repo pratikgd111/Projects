@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="images/netflix-logo.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index-header.css">
+    <link rel="stylesheet" href="css/index-content.css">
+    <link rel="stylesheet" href="css/index-footer.css">
+    <style>
+        body {
+            background-color: #202020;
+            margin: 0;
+        }
+
+        .container-fluid {
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body onload="loadMovieLists()">
+    <div class="container-fluid">
+
+        <!--header section-->
+        <section class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-#141414">
+                <a class="navbar-brand" href="#"><img src="images/Screenshot 2020-08-20 at 10.05.00 PM.png"
+                        alt="netflix-logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TV Shows</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Latest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">My List</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </section>
+
+        <!--main body section-->
+        <section class="main-contents">
+            <div id="movies">
+
+            </div>
+
+        </section>
+
+        <!--footer section-->
+        <section class="footer">
+            <div class="container">
+                <div class="social-media ">
+                    <img src="images/facebook.png" href="https://www.facebook.com/NetflixIN/" alt="fb"
+                        class="facebook-logo">
+                    <img src="images/insta.png" href="https://www.instagram.com/Netflix_IN/" alt="insta"
+                        class="instagram-logo">
+                    <img src="images/twitter.png" href="https://twitter.com/netflixindia" alt="twi"
+                        class="twitter-logo">
+                    <img src="images/yt.png" href="https://www.youtube.com/channel/UCZSNzBgFub_WWil6TOTYwAg" alt="yt"
+                        class="yotube-logo">
+                </div>
+
+
+                <div class="col-md-2">
+                    <ul class="member-footer-links ">
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Audio and Subtitles</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Media Centre</a>
+                        </li>
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Privacy</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="member-footer-links ">
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Audio and Subtitles</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Media Centre</a>
+                        </li>
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Privacy</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="member-footer-links ">
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Audio and Subtitles</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Media Centre</a>
+                        </li>
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Privacy</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="member-footer-links ">
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Audio and Subtitles</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Media Centre</a>
+                        </li>
+                        <li class="member-1">
+                            <a href="#" class="member-footer-link-content">Privacy</a>
+                        </li>
+                        <li class="member-2">
+                            <a href="#" class="member-footer-link-content">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-outline-info service-code">Service Code</button>
+
+                <div class="copyright">&#169; 1997-2020 Netflix inc USA(-nmasqwzx90)</div>
+
+
+            </div>
+        </section>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+
+        function loadMovieLists() {
+            const movieLists = [
+                {
+                    "title": "My List >",
+                    "items": [
+                        {
+                            "thumbnail": "images/thumbnails/sacred_games.jpg",
+                            "title": "Sacred Games",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action, Thriller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/boss_baby.jpg",
+                            "title": "Boss Baby",
+                            "season": "Season 1, Season 2",
+                            "age": "4+",
+                            "genre": "Animation",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sniper.png",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/lucider6.jpeg",
+                            "title": "Lucifer",
+                            "season": "Season 6",
+                            "age": "18+",
+                            "genre": "Action, Thriller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/boss_baby.jpg",
+                            "title": "Boss Baby",
+                            "season": "Season 1, Season 2",
+                            "age": "4+",
+                            "genre": "Animation",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sniper.png",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        }
+                    ]
+                },
+                {
+                    "title": "Popular on Netflix",
+                    "items": [
+                        {
+                            "thumbnail": "https://occ-0-4230-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXtNypabGOdPQGIn8jSay-cOY6Ebo0dLQfXGVHZ1BpRU3N34T-_r8f6PDjXhfAbow2cLEOjhNjZz8G-IsfQ56nYIm60L3l5DMNwe1HTGyxStTqfKdKKFVxOsrFTgrbf4U72qbRU0b4ugeg1G0NZCW5S0vkoXeeJ5ZCjKiZbCwYpqabBjk9Y3pRg.jpg?r=1f8",
+                            "title": "Gunjan Saxena",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action, Thriller"
+                        },
+                        {
+                            "thumbnail": "https://occ-0-4230-2186.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWVSvW3zwTvGYZMPNJQtBB2Jtd56zzwlSzjnp1zvcV6R1aqZHaR2BjW2sM4trhPZHKo9wU9nw7Onvp4FZiAKmAnXpHGCxpfrXCx1iusjOqHGNhTBU1UMEilqbWk2Tp_rIOj5gZ1oRYwiSQvS3rlmK4Y-uTzrzVuggHn00zZrC3mH5wK3eIBlFJ0.jpg?r=2ba",
+                            "title": "Project Power",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action, Thriller"
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/birdbox.jpeg",
+                            "title": "Bird Box",
+                            "season": "Movie",
+                            "age": "18+",
+                            "genre": "Triller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/stranger.jpg",
+                            "title": "stranger things",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        }
+                    ]
+                },
+                {
+                    "title": "Trending Now",
+                    "items": [
+                        {
+                            "thumbnail": "images/thumbnails/jamtara.jpg",
+                            "title": "jamtara",
+                            "season": "Movie ",
+                            "age": "18+",
+                            "genre": "Action, Thriller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/delhi.jpeg",
+                            "title": "Delhi Crime",
+                            "season": "Season 1, Season 2",
+                            "age": "14+",
+                            "genre": "Crime",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sniper.png",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sacred_games.jpg",
+                            "title": "Sacred games",
+                            "season": "Season 2",
+                            "age": "18+",
+                            "genre": "Action",
+                        }
+                    ]
+                },
+                {
+                    "title": "Golden Globe Award Wining TV Shows",
+                    "items": [
+                        {
+                            "thumbnail": "images/thumbnails/sacred_games.jpg",
+                            "title": "Sacred Games",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action, Thriller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/boss_baby.jpg",
+                            "title": "Boss Baby",
+                            "season": "Season 1, Season 2",
+                            "age": "4+",
+                            "genre": "Animation",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sniper.png",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        }
+                    ]
+                },
+                {
+                    "title": "Political TV Shows",
+                    "items": [
+                        {
+                            "thumbnail": "images/thumbnails/sacred_games.jpg",
+                            "title": "Sacred Games",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action, Thriller",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/boss_baby.jpg",
+                            "title": "Boss Baby",
+                            "season": "Season 1, Season 2",
+                            "age": "4+",
+                            "genre": "Animation",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/sniper.png",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        },
+                        {
+                            "thumbnail": "images/thumbnails/stranger.jpg",
+                            "title": "Sniper",
+                            "season": "Season 1",
+                            "age": "18+",
+                            "genre": "Action",
+                        }
+                    ]
+                }
+            ]
+
+            let items = ''
+            for (let index = 0; index < movieLists.length; index++) {
+                items += `<div class="movie-list">`
+
+                const list = movieLists[index]
+                items += `<div class="movie-slider-type">${list["title"]}</div>`
+
+                const movies = list["items"]
+                items += `<ul class="movie-slider-1">`
+                for (let movieIndex = 0; movieIndex < movies.length; movieIndex++) {
+                    const movie = movies[movieIndex]
+                    items += `
+                  <li>
+                    <div class="movie-slider-item">
+                      <img src="${movie['thumbnail']}" alt="">
+                      <div class="controls">
+                        <button class="btn-control btn-control-1"><img src="images/icon-voice.png" alt=""></button> 
+                        <button class="btn-control btn-control-2"><img src="images/icon-thumbs_up.png" alt=""></button> 
+                        <button class="btn-control btn-control-3"><img src="images/icon-thumbs_down.png" alt=""></button> 
+                        <button class="btn-control btn-control-4"><img src="images/icon-checkmark.png" alt=""></button> 
+    
+                        <img class="play" src="images/icon-circled_play.png" alt="">
+                        <div class="title">${movie['title']}</div>
+                        <div class="age">${movie['age']} <span>${movie['season']}</span></div>
+                        <div class="genre">${movie['genre']}</div>
+    
+                      </div>
+                    </div>
+                  </li>
+              `
+                }
+                items += `</ul>`
+                items += `</div>`
+            }
+
+            $('#movies').html(items)
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

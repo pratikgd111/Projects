@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movies {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="movies"></div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        function loadMovies() {
+            let movies = ``
+            for (let index = 0; index < 1000; index++) {
+                movies += `<div class="item">${index + 1}</div>`
+            }
+            $('#movies').html(movies)
+        }
+        loadMovies()
+    </script>
+</body>
+
+</html>

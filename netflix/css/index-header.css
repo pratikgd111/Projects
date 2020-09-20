@@ -1,0 +1,14 @@
+.logo {
+  height: 40px;
+  width: 60px;
+  margin: 0;
+  margin-top: -10px;
+}
+
+#navbarSupportedContent ul li a {
+  color: #e5e5e5;
+}
+
+#navbarSupportedContent ul li a:hover {
+  color: #b4b0b0;
+}

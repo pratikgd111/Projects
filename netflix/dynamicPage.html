@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .product {
+            border: black solid 2px;
+            margin: 0px;
+        }
+
+        .product img {
+            height: 200px;
+            width: 160px;
+            margin-top: 5px;
+        }
+
+        .title,
+        .compony,
+        .price {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body onload="loadProducts()">
+    <div class="container">
+        <h1>Products</h1>
+        <div class="products" id="products"></div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function loadProducts() {
+
+            const products = [
+                {
+                    "list-title": "cloths",
+                    "items": [
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/I/91f9aIz-cWL._AC_SY400_.jpg",
+                            "title": "Allen Solly Men's Polo",
+                            "compony": "Allen Solly",
+                            "price": "INR 2000"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/I/81iNwce-hML._AC_SY400_.jpg",
+                            "title": "T2F Boy's Joggers Track Pant",
+                            "compony": "T2F",
+                            "price": "INR 1,499"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/I/61Q4JoFovsL._AC_SY400_.jpg",
+                            "title": "Vaamsi Women's Poly Crepe straight Kurta",
+                            "compony": "Vaamsi",
+                            "price": "INR 700"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/I/914vNVISGcL._AC_SY400_.jpg",
+                            "title": "Women's Kalamkari Silk",
+                            "compony": "Anni Designer",
+                            "price": "INR 7000"
+                        },
+                    ]
+                },
+                {
+                    "list-title": "apple devices",
+                    "items": [
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/I/71HCR-N2O2L._AC_UL405_SR405,405_.jpg",
+                            "title": "New Apple MacBook Pro (13-inch, 16GB RAM, 1TB SSD",
+                            "compony": "Apple",
+                            "price": "INR 1,92,900"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/G/31/img19/Laptops/apple/Family/AMZ_FamilyStripe_Mac_Accessories._CB450739237_.png",
+                            "title": "Apple magic mouse",
+                            "compony": "Apple",
+                            "price": "INR 7,499"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/G/31/img19/Laptops/apple/Family/AMZ_FamilyStripe_MacBook_Air_previous_model._CB440003318_.png",
+                            "title": "Apple MacBook Air (13-inch, 8GB RAM, 128GB Storage",
+                            "compony": "Apple",
+                            "price": "INR 75,500"
+                        },
+                        {
+                            "thumbnail": "https://images-eu.ssl-images-amazon.com/images/G/31/img19/Laptops/apple/Family/AMZ_FamilyStripe_MacBook_Pro_16_inch._CB447650622_.png",
+                            "title": "Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage",
+                            "compony": "Apple",
+                            "price": "INR 1,97,000"
+                        },
+
+                    ]
+                },
+            ]
+
+            let str = ''
+            for (let index = 0; index < products.length; index++) {
+
+                const product = products[index]
+                str += `
+                    <h4>${product["list-title"]}</h4>
+                    <div class="row">
+                    `
+                const items = product["items"]
+                for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+                    const item = items[itemIndex]
+                    str += `
+                        <div  class="product col-md-3">
+                 <img src="${item["thumbnail"]}" alt="">
+                 <div class="title">${item["title"]}</div>
+                 <div class="compony text-black-50">${item["compony"]}</div>
+                 <div class="price text-black-50">${item["price"]}</div>
+                </div >
+                        `
+                }
+
+                str +=`</div>`
+
+            }
+            
+            $('#products').html(str)
+
+
+        }
+
+    </script>
+</body>
+
+</html>
