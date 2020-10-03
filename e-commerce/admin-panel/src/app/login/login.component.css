@@ -1,0 +1,9 @@
+.form {
+  background: linear-gradient(to right, rgb(109, 235, 240), rgb(89, 171, 238));
+  height: 250px;
+  width: 450px;
+  margin: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: white 0px 0px 3px 3px;
+}

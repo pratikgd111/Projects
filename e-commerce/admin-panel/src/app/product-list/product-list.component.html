@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+        <button (click)="addProduct()" class="btn btn-success btn-sm float-right">Add</button>
+        <h4>Product List</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Brand</th>
+                    <th>Category</th>
+                    <th>Active</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products; let index = index">
+                    <td>{{index + 1}}</td>
+                    <td>
+                        <img *ngIf="product['image']" class="product-image"
+                            src="http://localhost:3000/product/image/{{product['image']}}" alt="">
+                        <button (click)="uploadImage(product)" *ngIf="!product['image']"
+                            class="btn-dark btn-sm">upload</button>
+                    </td>
+                    <td>{{product['title']}}</td>
+                    <td>{{product['price']}}</td>
+                    <td>{{product['brand']['title']}}</td>
+                    <td>{{product['category']['title']}}</td>
+                    <td>{{product['isActive']}}</td>
+                    <td>
+                        <button (click)="toggleActiveStatus(product)" [class.btn-success]="product['isActive'] == 0"
+                            [class.btn-danger]="product['isActive'] == 1"
+                            class="btn btn-sm">{{product['isActive'] == 0 ? 'Activate' : 'Deactive'}}</button>
+
+                        <button (click)="onEdit(product)" style="margin-left: 5px;"
+                            class="btn btn-warning btn-sm">Edit</button>
+                        <button (click)="onDelete(product['id'])" style="margin-left: 5px;"
+                            class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

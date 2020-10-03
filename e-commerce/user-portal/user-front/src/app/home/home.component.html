@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" routerLink="/home" style="color: rgb(2, 156, 2);">MyStore</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a routerLink="/home/product/gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a routerLink="/home/order/order-history" class="nav-link">My Orders</a></li>
+                <li class="nav-item"><a routerLink="/home/product/cart" class="nav-link">Cart</a></li>
+                <li class="nav-item"><a routerLink="/home/user/profile" class="nav-link">Profile</a></li>
+                <li (click)="onLogout()" class="nav-item"><a class="nav-link">Logout</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid" style="margin-top: 20px;">
+    <router-outlet></router-outlet>
+</div>

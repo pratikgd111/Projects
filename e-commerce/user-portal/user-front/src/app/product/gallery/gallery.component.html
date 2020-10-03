@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light bg-default justify-content-between">
+    <a class="navbar-brand">Filters</a>
+    <form class="form-inline">
+        <input [(ngModel)]="productTitle" name="productTitle" class="form-control mr-sm-2" type="search"
+            placeholder="Search" aria-label="Search">
+        <button (click)="searchProducts()" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
+<div class="row">
+    <div class="col-md-2">
+        <div>
+            <h6>categories</h6>
+        </div>
+        <select (change)="filterProducts($event)" name="category" id="" class="form-group">
+            <option [value]="-1">All Categories</option>
+            <option [value]="category['id']" *ngFor="let category of categories">{{category['title']}}</option>
+        </select>
+
+    </div>
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-9">
+        <div class="row">
+            <div *ngFor="let product of products" class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="http://localhost:4000/product/image/{{product['image']}}"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product['title']}}</h5>
+                        <p class="card-text">{{product['description']}}</p>
+
+                        <div> <strong>Price:{{product['price']}}</strong></div>
+                        <div> <strong>Category:{{product['category']['title']}}</strong></div>
+
+                        <button style="margin-top: 10px;" (click)="addToCart(product)" class="btn btn-primary">Add to
+                            cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

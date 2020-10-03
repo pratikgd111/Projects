@@ -1,0 +1,26 @@
+img {
+  height: 80px;
+  width: 100px;
+  padding-left: 10px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+tr td:nth-child(3) {
+  padding-top: 25px;
+}
+tr td:nth-child(4) {
+  padding-top: 25px;
+}
+tr td:nth-child(5) {
+  padding-top: 25px;
+}
+tr td:nth-child(6) {
+  padding-top: 25px;
+}
+tr td:last-child {
+  padding-top: 25px;
+  padding-left: 45px;
+}

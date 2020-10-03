@@ -1,0 +1,10 @@
+.product-image {
+  height: 55px;
+  width: 55px;
+}
+
+.product-image:hover {
+  transform: scale(1.5);
+  border: 0.1px solid gray;
+  box-shadow: black 0px 0px 0px 1px;
+}
