@@ -1,0 +1,14 @@
+
+  
+    <div class="form-group">
+        <label>Add Your Review</label>
+        <input [(ngModel)]="comment" type="text" class="form-control" placeholder="comment">
+    </div>
+    <div class="form-group">
+        <label>Rating</label>
+        <input [(ngModel)]="rating" type="number" class="form-control"  placeholder="1 to 5">
+    </div>
+
+
+
+    <button (click)="addReview()"  class="btn btn-primary btn-large btn-block">Add</button>

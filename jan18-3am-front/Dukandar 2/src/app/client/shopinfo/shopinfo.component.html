@@ -1,0 +1,10 @@
+<div class="shopinfo">
+
+    <h6>Location : {{shopInfo[4]['distance']}} km <fa-icon [icon]="faMapMarker"></fa-icon> away from you</h6>
+    <h6>Open    :<fa-icon [icon]="faClock"></fa-icon> {{shopInfo[0]['opening_time']}}   <span style="margin-left: 50px;">Close :<fa-icon [icon]="faClock"></fa-icon> {{shopInfo[0]['closing_time']}} </span></h6>
+    <h6>Mobile  : <fa-icon [icon]="faMobile"></fa-icon> {{shopInfo[1]['mobile']}}</h6>
+    <br>
+    <h6>Why to visit our shop :</h6>
+    <p>{{shopInfo[0]['reasontoVisit']}}</p>
+
+  </div>

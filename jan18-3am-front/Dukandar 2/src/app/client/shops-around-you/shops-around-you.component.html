@@ -1,0 +1,23 @@
+
+<div class="card gedf-card" *ngFor="let hsi of homeshopinfo">
+  <div class="card-header">
+      <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="mr-2">
+                <a href="/client/shopdetails">
+                        <img style="height: 60px; width: 100px; border-radius: 10px;" src="{{hsi['shopPrifilepic']}}" alt="">
+                </a>    
+              </div>
+              <div class="ml-2">
+                        <div class="h5 m-0">{{hsi['shopname']}}</div>
+                        <p> 5 km <fa-icon [icon]="faMapMarker"></fa-icon> away from you</p>
+                        <p>Opening Time : {{hsi['opentime']}}   <span style="margin-left: 30px;">Closing Time : {{hsi['closetime']}}</span></p>      
+              </div>
+          </div>
+      </div>
+
+  </div>
+  <div class="card-body">
+        <img style="height: 200px; width: 700px; border-radius: 10px;" src="{{hsi['attractionpic']}}" alt="">
+  </div>
+</div>   

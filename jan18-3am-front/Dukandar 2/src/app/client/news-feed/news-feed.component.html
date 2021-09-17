@@ -1,0 +1,44 @@
+<div class="row" style="margin-left: 4px;">
+    <div *ngFor="let hsi of homeshopinfo" class="box">
+        <a href="/client/shopdetails/shopinfo?shopId={{hsi[1]['id']}}">
+        <img style="height: 200px; width: 100%; border-radius: 10px;" src="{{hsi[0]['photo']}}" alt="">
+        </a>
+        <table>
+            <tr>
+                <td>
+                    <h4><b> Offer Name</b> : {{hsi[0]['offername']}}</h4>
+                </td>
+                <td>
+
+
+                    <h4><b> Shop Name</b> : {{hsi[1]['shopName']}}</h4>
+
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <h4><b> Discount</b> : {{hsi[0]['description']}}</h4>
+                </td>
+                
+            </tr>
+            <tr>
+                <h4><b> Offer last to</b> : {{hsi[0]['valid_till']}}</h4>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

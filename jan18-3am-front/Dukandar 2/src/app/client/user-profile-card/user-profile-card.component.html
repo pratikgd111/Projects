@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4> Your Profile</h4>
+                </div>
+                <div class="panel-heading">
+                    <button class="btn btn-primary float-right float-bottom" [routerLink]="['/client/profile']"
+                        routerLinkActive="router-link-active">Edit Profile </button>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                        <img style="border-radius: 20px;" alt="User Pic" src={{photo}} id="profile-image1"
+                            class="img-responsive">
+                        <!-- img-circle style="height: 200px; width: 170px;"-->
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 col-lg-6">
+                        <div class="container">
+                            <h2>{{fullname}}</h2>
+                        </div>
+                        <hr>
+                        <ul class="container details">
+                            <li>
+                                <p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>{{email}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Mobile : {{mobile}}
+                                </p>
+                            </li>
+                            <!-- <li>
+                                <p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>{{mobile}}</p>
+                            </li> -->
+                        </ul>
+                        <hr>
+                        <div class="container">
+                            <h2>Address</h2>
+                        </div>
+                        <hr>
+                        <ul class="container details">
+                            <li>
+                                <p>
+                                    Street Address1 : {{street_address1}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Street Address2 : {{street_address2}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    City : {{city}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    State : {{state}}
+
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Pincode : {{zipcode}}
+                                </p>
+                            </li>
+                            <!-- <li>
+                                <p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>{{mobile}}</p>
+                            </li> -->
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

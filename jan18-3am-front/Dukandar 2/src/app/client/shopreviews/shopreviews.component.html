@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="reviewbox">
+
+		<div *ngFor="let review of reviews" class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4">
+						<img style="border-radius: 75px; width: 150px; height: 150px;" src="{{review['image']}}"
+							class="img img-rounded img-fluid" />
+						<p class="text-secondary ">{{review['time']}}</p>
+					</div>
+					<div class="col-md-8">
+						<h4><strong>{{review['username']}}</strong></h4>
+
+
+						<div *ngFor="let i of [].constructor(review['rating'])" style="float: right;">
+							<h4>⭐</h4>
+						</div>
+
+						<div class="clearfix"></div>
+						<p>{{review['description']}}</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</div>

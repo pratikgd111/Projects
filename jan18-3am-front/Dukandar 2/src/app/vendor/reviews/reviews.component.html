@@ -1,0 +1,25 @@
+<div style="position: sticky; top:0px; overflow: hidden; background-color: white;">
+	<h2 class="text-danger text-center">Reviews</h2>
+</div>
+
+<div class="reviewbox">
+
+<div class="card" *ngFor=" let r of shopreviewinfo">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-2">
+				<img style="width: 200px; height: 100px; border-radius: 50px;" src="{{r['image']}}" class="img img-rounded img-fluid"/>
+				<p class="text-secondary text-center">{{r['time']}}</p>
+			</div>
+			<div class="col-md-10">
+				<p>
+					<a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>{{r['username']}}</strong></a>
+					<span style="float: right;">{{r['rating']}}</span>
+			   </p>
+			   <div class="clearfix"></div>
+				<p>{{r['description']}}</p>
+		 </div>
+		</div>
+	</div>
+</div>
+</div>

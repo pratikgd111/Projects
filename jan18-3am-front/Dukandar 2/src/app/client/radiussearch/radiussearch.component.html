@@ -1,0 +1,38 @@
+<div class="row" style="margin-left: 4px;">
+    <div class="card gedf-card" *ngFor="let shop of shops">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="mr-2">
+                <a href="/client/shopdetails/shopinfo?shopId={{shop[2]['id']}}">
+                        <img style="height: 60px; width: 100px; border-radius: 10px;" src="{{shop[1]['photo']}}" alt="">
+                </a>    
+                    </div>
+                    <div class="ml-2">
+                        <div *ngFor="let i of [].constructor(shop[4]['average_rating'])" style="float: right;">
+                            ⭐
+                        </div>
+                        <div class="h5 m-0">{{shop[2]['shopName']}}</div>
+
+                        <p> {{shop[4]['distance']}} km <fa-icon [icon]="faMapMarker"></fa-icon> away from you</p>
+                        <p>Opening Time : {{shop[2]['opening_time']}}   <span style="margin-left: 30px;">Closing Time : {{shop[2]['closing_time']}}</span></p>
+                     
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="card-body">
+        <img style="height: 200px; width: 700px; border-radius: 10px;" src="{{shop[3][0]['photo']}}" alt="">
+
+        </div>
+        <div class="card-footer">
+            <button (click)="like(hsi['shopid'])" class=" btn btn-link"><fa-icon [icon]="faThumbsUp"></fa-icon>Like</button><span>{{shop['like']}}</span>
+            <button  (click)="addtofev(hsi['shopid'])" *ngIf="isFev==0" class=" btn btn-link" style="float: right;"><fa-icon [icon]="faHeartBroken"></fa-icon>Add to Fev</button>
+            <button  (click)="addtofev(hsi['shopid'])" *ngIf="isFev==1" class=" btn btn-link" style="float: right;"><fa-icon [icon]="faHeart"></fa-icon>Add to Fev</button>
+
+        </div>
+    </div>   
+</div>

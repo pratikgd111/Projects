@@ -1,0 +1,9 @@
+.addbox{
+    overflow: hidden; 
+    overflow-y: scroll; 
+    height: 470px;
+}
+
+.addbox::-webkit-scrollbar{
+    display: none;
+}

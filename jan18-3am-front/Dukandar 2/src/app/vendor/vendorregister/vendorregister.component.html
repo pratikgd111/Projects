@@ -1,0 +1,221 @@
+<nav class="navbar navbar-expand-lg navStyle">
+    <!-- <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a> -->
+    <a class="brand-navbar" href="#">
+        <h3 style="color: whitesmoke;">DUKANDAR</h3>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link">
+                    <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> About
+                </a>
+            </li>
+            <li id="logout" (click)="OnLogout()"  class="nav-item">
+                <a class="nav-link">
+                    <fa-icon [icon]=""></fa-icon> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+<div style="position: sticky; top:0px; overflow: hidden; background-color: white;">
+    <h2 class="text-danger text-center">Vendor Registration Form</h2>
+</div>
+<div class="registerbox">
+
+    <div class="container register-form">
+
+
+        <div class="form">
+            <div class="preview text-center">
+                <img class="preview-img" src="{{photo}}" alt="Preview Image" width="150" height="150" />
+                <div class="browse-button">
+                    <i class="fa fa-pencil-alt"></i>
+                    <input style="display:none" type="file" (change)="onFileChanged($event)" #fileInput>
+                    <button style="margin:1%" class="btn btn-sm btn-success" (click)="fileInput.click()">Select
+                        File</button>
+                    <button class="btn btn-sm btn-success" (click)="onUpload()">Upload!</button>
+                </div>
+                <span class="Error"></span>
+            </div>
+            <div class="form-content">
+
+                <div class="card">
+                    <div class="card-header">
+                        <b> Personal Info</b>
+                    </div>
+                    firstname
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input [(ngModel)]="firstName" type="text" class="form-control"
+                                        placeholder="first name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobileno">Mobile No.</label>
+                                    <input [(ngModel)]="mobile" type="text" class="form-control"
+                                        placeholder="mobile no" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <br>
+                                    <select [(ngModel)]="gender" name="gender" id="gender"
+                                        style="width: 520px; height: 36px;">
+                                        <option value="MALE">Male</option>
+                                        <option value="FEMALE">Female</option>
+                                        <option value="OTHER">Transgender</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lastname">Last Name</label>
+                                    <input [(ngModel)]="lastName" type="text" class="form-control"
+                                        placeholder="last name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input [(ngModel)]="email" type="email" class="form-control" placeholder="email"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Age">Age</label>
+                                    <input [(ngModel)]="age" type="int" class="form-control" placeholder="Age"
+                                        value="" />
+                                </div>
+                            </div>
+
+                            <button (click)="SavePersonalInfo()" class="btn btn-success">Save Personal Info</button>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <b>Shop Details</b>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label for="firstname">Shop Name</label>
+                                        <input [(ngModel)]="shopName" type="text" class="form-control"
+                                            placeholder="shop name" value=""  readonly/>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="businesscategory">Business category</label>
+                                        <br>
+                                        <input [(ngModel)]="businesscategory" type="text" class="form-control"
+                                            placeholder="Business Category" value=""  readonly/>
+                                      
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="openingtime">Opening Time</label>
+                                    <input [(ngModel)]="openingtime" type="time" class="form-control"
+                                        placeholder="Opening time" value="" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="closingtime">Closing Time</label>
+                                    <input [(ngModel)]="closingtime" type="time" class="form-control"
+                                        placeholder="Closing tome" value="" />
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="firstname">Speciality</label>
+                                    <input [(ngModel)]="speciality" type="text" class="form-control"
+                                        placeholder="speciality" value="" />
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="reasontovisit">Reasons to visit your shop </label>
+                                    <textarea [(ngModel)]="reasontoVisit" id="whyvisit" cols="119" rows="3"
+                                        style="resize: none;"></textarea>
+                                </div>
+                            </div>
+
+                            <button (click)="SaveShopDetails()" class="btn btn-success">Save Shop Details</button>
+
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Shop Address</b>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="streetadd2">Street Address-1</label>
+                                        <input [(ngModel)]="streetadd1" type="text" class="form-control"
+                                            placeholder="street add 2" value="" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="streetadd1">Street Address-2</label>
+                                        <input [(ngModel)]="streetadd2" type="text" class="form-control"
+                                            placeholder="street add 1" value="" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="city">City</label>
+                                        <input [(ngModel)]="city" type="text" class="form-control" placeholder="city"
+                                            value="" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="state">State</label>
+                                        <input [(ngModel)]="state" type="text" class="form-control" placeholder="state"
+                                            value="" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="pincode">Pincode</label>
+                                        <input [(ngModel)]="pincode" type="int" class="form-control"
+                                            placeholder="pincode" value="" />
+                                    </div>
+
+                                    <br>
+                                    <br>
+                                    <label for="location">Location :</label>
+                                    <button (click)="currentLocation()" class="btn btn-primary btn-sm"
+                                        style="margin-left: 140px;"> Give your current location</button>
+                                </div>
+
+                                <button (click)="SaveAddressInfo()" class="btn btn-success">Save Address Info</button>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button (click)="onSubmit()" class="btn btn-success">Next</button>
+                            <button type="reset" class="btn btn-danger" style="margin-left: 50px;">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

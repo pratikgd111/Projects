@@ -1,0 +1,309 @@
+<!-- <nav id="dukandar" class="navbar navbar-expand-lg navStyle">
+    <a class="brand-navbar" href="#">
+        <h3 style="color: whitesmoke;">DUKANDAR</h3>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link">
+                    <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <fa-icon [icon]="faSearch"></fa-icon> Search
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="portfolio.html" class="nav-link">
+                    <fa-icon [icon]="faBell"></fa-icon> Notification
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="onProfile()" [routerLink]="['/client/profile-card']" routerLinkActive="router-link-active"
+                    class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> Profile
+                </a>
+            </li>
+            <li class="nav-item">
+
+                <a class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> About
+                </a>
+            </li>
+            <li id="logout" (click)="OnLogout()" class="nav-item">
+                <a class="nav-link">
+                    <fa-icon [icon]=""></fa-icon> Logout
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="row row-full">
+        <div class="col-md-3 left"> </div>
+
+        <div class="col-md-6 colcenter">
+            <div class="row centerrow">
+                <div class="searchbar align-items-center">
+
+
+
+                    <input [(ngModel)]="radius" type="text">
+
+
+                    <button (click)="onSearch()" class="btn btn-primary" style="border-radius: 5px; margin-left: 25px;">
+                        Search </button>
+
+                </div>
+                <div>
+                    <button (click)="nearme()" class="btn btn-primary shortcutbtn">Near me</button>
+                    <button (click)="threeplusrating()" class="btn btn-primary shortcutbtn">3+ Rating</button>
+                    <button (click)="offershotel()" class="btn btn-primary shortcutbtn">Offers</button>
+                    <button (click)="savefourtyplusper()" class="btn btn-primary shortcutbtn">Save 40+%</button>
+                    <button class="btn btn-primary shortcutbtn">Offers</button>
+                </div>
+                <hr style="width: 100%;">
+            </div>
+
+
+        </div>
+
+        <div class="col-md-3 right">
+
+            <div class="popular">
+                <div class="container">
+
+                    <h3 class="font-weight-light text-center text-lg-left">Popular</h3>
+
+                    <hr class="mt-2 mb-5">
+
+                    <div class="row text-center text-lg-left">
+
+                        <div class="col-md-4" *ngFor="let pi of popularimage">
+                            <a href="#" class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src={{pi}} alt="">
+                                popular image
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- 
+
+    <a class="brand-navbar" href="#"><h3 style="color: whitesmoke;">DUKANDAR</h3></a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link"><fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item">
+                <a href="client/search" class="nav-link"><fa-icon [icon]="faSearch"></fa-icon> Search</a>
+            </li>
+            <li class="nav-item">
+                <a href="portfolio.html" class="nav-link"><fa-icon [icon]="faBell"></fa-icon> Notification</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link"><fa-icon [icon]="faUser"></fa-icon> About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+<div class="row row-full">
+    <div class="col-md-3 left"> </div>
+
+    <div class="col-md-6 " >
+        <br>
+        <br>
+        <div class="row centerrow" style="position: fixed; overflow: hidden;" >
+            
+            <div>
+                <button (click)="nearme()" class="btn btn-primary shortcutbtn">Near me</button> 
+                <button (click)="threeplusrating()" class="btn btn-primary shortcutbtn">3+ Rating</button>
+                <button (click)="offershotel()" class="btn btn-primary shortcutbtn">Offers</button>
+                <button (click)="savefourtyplusper()" class="btn btn-primary shortcutbtn">Save 40+%</button>
+                <button class="btn btn-primary shortcutbtn">Offers</button>
+                <hr>
+            </div>
+            <div class="routerscroll">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+ 
+
+ </div>
+
+    <div  class="col-md-3 right">
+
+        <div class="popular">
+            <div class="container">
+
+                <div style="position: sticky; top: 0px; background-color: white; z-index: 10;">
+                <h3 class="font-weight-light text-center text-lg-left">Popular</h3>
+                <hr class="mt-2 mb-5">
+                </div>
+
+                <div class="row text-center text-lg-left">
+              
+                  <div class="col-md-4" *ngFor="let pi of popularimage" >
+                    
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="{{pi}}" alt="">
+                          popular image
+                        </a>
+                  </div>
+                  
+                </div>
+              
+              </div>
+        </div>
+    </div>
+ </div>
+</div> -->
+
+
+
+
+<nav class="navbar navbar-expand-lg navStyle">
+    <a class="brand-navbar" href="#">
+        <h3 style="color: whitesmoke;">DUKANDAR</h3>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link">
+                    <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item">
+                <a href="client/search" class="nav-link">
+                    <fa-icon [icon]="faSearch"></fa-icon> Search
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> About
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/client/profile-card" class="nav-link">
+                  <fa-icon [icon]="faUser"></fa-icon> Profile
+                </a>
+              </li>
+
+
+
+            <li id="logout" (click)="OnLogout()"  class="nav-item">
+                <a class="nav-link">
+                    <fa-icon [icon]=""></fa-icon> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row row-full">
+        <div class="col-md-3 left"> </div>
+
+        <div class="col-md-6 ">
+
+            <div class="row centerrow" style="position: fixed; margin-left: -2%; overflow: hidden;">
+                <div class="searchbar align-items-center">
+
+                    <input [(ngModel)]="radius" type="text">
+                    <button  (click)="onSearch()" class="btn btn-primary" style="border-radius: 5px; margin-left: 25px;">
+                        Search </button>
+                    <button  (click)="onSearchAgain()" class="btn btn-primary" style="border-radius: 5px; margin-left: 25px;">
+                            Search again</button>
+
+                </div>
+                <ul style="position: fixed; right: 30%; top:130px">
+                    <li><button (click)="nearme()" class="btn btn-primary shortcutbtn">Near me</button></li>
+                    <li><button (click)="threeplusrating()" class="btn btn-primary shortcutbtn">3+ Rating</button></li>
+                    <li><button (click)="offershotel()" class="btn btn-primary shortcutbtn">Offers</button></li>
+                    <li><button (click)="savefourtyplusper()" class="btn btn-primary shortcutbtn">Save 40+%</button>
+                    </li>
+                    <li><button class="btn btn-primary shortcutbtn">Offers</button></li>
+                    <hr>
+                </ul>
+
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="routerscroll">
+                    <router-outlet></router-outlet>
+                </div>
+
+            </div>
+           
+
+        </div>
+
+        <div class="col-md-3 right">
+
+            <div class="popular">
+                <div class="container">
+
+                    <div style="position: sticky; top: 0px; background-color: white; z-index: 10;">
+                        <h3 class="font-weight-light text-center text-lg-left">Popular</h3>
+                        <hr class="mt-2 mb-5">
+                    </div>
+
+                    <div class="row text-center text-lg-left">
+
+                        <div class="col-md-4" *ngFor="let pi of popularimage">
+
+                            <a href="#" class="d-block mb-4 h-100">
+                                <img class="img-fluid img-thumbnail" src="{{pi}}" alt="">
+                                popular image
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

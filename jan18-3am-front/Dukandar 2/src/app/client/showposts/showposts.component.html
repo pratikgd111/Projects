@@ -1,0 +1,25 @@
+<div  class="postbox">
+    <div *ngFor="let post of posts" class="box">
+
+        <img style="height: 200px; width: 100%; border-radius: 10px;" src="{{post['photo']}}" alt="">
+
+        <table>
+            <tr>
+                <td>
+                    <h4><b> Offer Name</b> : {{post['offername']}}</h4>
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <h4><b> Discount</b> : {{post['description']}}</h4>
+                </td>
+                
+            </tr>
+            <tr>
+                <h4><b> Offer last to</b> : {{post['valid_till']}}</h4>
+            </tr>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,217 @@
+<!-- 
+
+    
+<nav class="navbar navbar-expand-lg navStyle">
+     <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a> 
+    <a class="brand-navbar" href="#"><h3 style="color: whitesmoke;">DUKANDAR</h3></a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link"><fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link"><fa-icon [icon]="faUser"></fa-icon> About</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="OnLogout()" href="about.html" class="nav-link"><fa-icon [icon]=""></fa-icon> Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<div class="container emp-profile">
+        <div class="row">
+            <br>
+            <div class="col-md-3">
+                <div class="profile-img">
+                    <img src={{profilepic}} alt="" width="200px" height="200px" style="border-radius: 100px;"/>
+                    <br>
+                   <p style="color: rgb(110, 108, 108); margin-left: 50px;">change profile</p> 
+                    <input class="" type="file" name="file"/>
+
+
+                    <br>
+                    <br>
+                    <div class="profile-work">
+                        <h4>Shop details</h4>
+                        <p>{{shopdetails}}</p><br/>
+                        <h4>Address</h4>
+                        <p>{{address}}</p><br/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="profile-head">
+                            <h4>
+                                Bhalchandra Shinde
+                            </h4>
+                            <h6>
+                                Shop Name Shop Name
+                            </h6>
+                            <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="home-tab" data-toggle="tab" href="/vendor/showprofile" role="tab" aria-controls="home" aria-selected="false">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/showposts" role="tab" aria-controls="profile" aria-selected="false">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/addpost" role="tab" aria-controls="profile" aria-selected="false">Add Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/reviews" role="tab" aria-controls="profile" aria-selected="false">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/vendorregister" role="tab" aria-controls="profile" aria-selected="false"> Edit profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/gallery" role="tab" aria-controls="profile" aria-selected="false"> Gallery</a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+
+
+                    <router-outlet></router-outlet>
+
+
+
+
+
+            </div>
+
+
+            
+        </div>
+</div> -->
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navStyle">
+    <!-- <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a> -->
+    <a class="brand-navbar" href="#">
+        <h3 style="color: whitesmoke;">DUKANDAR</h3>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link">
+                    <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item">
+                <a  class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> About
+                </a>
+            </li>
+            <li id="logout" (click)="OnLogout()"  class="nav-item">
+                <a class="nav-link">
+                    <fa-icon [icon]=""></fa-icon> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class=" emp-profile">
+    <div class="row">
+        <br>
+
+        <div class="col-md-3">
+
+
+            <br>
+
+
+            <div class="profile-img">
+
+
+
+
+
+                <img src={{profilepic}} alt="" width="200px" height="200px" style="border-radius: 100px;" />
+                
+
+                <!-- <a class=" navbtn" id="profile-tab" data-toggle="tab" href="/vendor/vendorregister" role="tab"
+                    aria-controls="profile" aria-selected="false"> Edit profile</a> -->
+
+                <div class="profile-work">
+                    <br>
+                    <h4>Shop details</h4>
+                    <p>Opening time: {{opentime}} </p>
+                    <p>Closing time: {{clostime}}</p>
+                    <p>Reason to visit: <br>{{reasontovisit}} </p>
+
+                    <h4>Address</h4>
+                    <p>{{street1}} {{street2}} ,{{city}},{{state}} -{{zip}}</p>
+                    <!-- <p>City : {{city}}</p>
+                        <p>State : {{state}} -{{zip}}</p> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-9">
+
+            <br>
+
+
+            <div class="profile-head">
+                <h4>
+                    {{shopname}}
+                </h4>
+                <h6>
+                    {{firstName }} {{lastName}}
+                </h6>
+                <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="home-tab" data-toggle="tab" href="/vendor/showprofile" role="tab"
+                            aria-controls="home" aria-selected="false">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/showposts"
+                            role="tab" aria-controls="profile" aria-selected="false">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/addpost"
+                            role="tab" aria-controls="profile" aria-selected="false">Add Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/reviews"
+                            role="tab" aria-controls="profile" aria-selected="false">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/vendorregister"
+                            role="tab" aria-controls="profile" aria-selected="false"> Edit profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/enquiry"
+                            role="tab" aria-controls="profile" aria-selected="false"> Enquiries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbtn" id="profile-tab" data-toggle="tab" href="/vendor/showprofile/gallery"
+                            role="tab" aria-controls="profile" aria-selected="false"> Gallery</a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

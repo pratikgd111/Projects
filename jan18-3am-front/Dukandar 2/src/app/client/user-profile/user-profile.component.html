@@ -1,0 +1,153 @@
+<nav class="navbar navbar-expand-lg navStyle">
+    <!-- <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a> -->
+    <a class="brand-navbar" href="#">
+        <h3 style="color: whitesmoke;">DUKANDAR</h3>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+        <span><i class="fas fa-align-right iconStyle"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto navList">
+            <li class="nav-item active"><a href="#" class="nav-link">
+                    <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+                </a></li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <fa-icon [icon]="faUser"></fa-icon> About
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div style="position: sticky; top:0px; overflow: hidden; background-color: white;">
+    <h2 class="text-danger text-center">Edit Profile</h2>
+</div>
+<div class="registerbox">
+
+    <div class="container register-form">
+        <div class="form">
+            <div class="preview text-center">
+                <!-- <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                    <img style="height: 200px;width: 150px; border-radius: 20px; align-content: center;" alt="User Pic"
+                        src={{photo}} id="profile-image1" class="img-responsive ">
+                </div> -->
+                <img style="border-radius:10px;" class="preview-img" src="{{photo}}" alt="Preview Image" width="150"
+                    height="150" />
+                <div class="browse-button">
+                    <i class="fa fa-pencil-alt"></i>
+                    <input style="display:none" type="file" (change)="onFileChanged($event)" #fileInput>
+                    <button style="margin:1%" class="btn btn-sm btn-success" (click)="fileInput.click()">Select
+                        File</button>
+                    <button class="btn btn-sm btn-success" (click)="onUpload()">Upload!</button>
+                </div>
+                <span class="Error"></span>
+            </div>
+            <div class="form-content">
+
+                <div class="card">
+                    <div class="card-header">
+                        <b> Personal Info</b>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input [(ngModel)]="firstName" type="text" class="form-control"
+                                        placeholder="first name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstname">Last Name</label>
+                                    <input [(ngModel)]="lastName" type="text" class="form-control"
+                                        placeholder="last name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Id</label>
+                                    <input [(ngModel)]="email" type="text" class="form-control" placeholder="email"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile">mobile</label>
+                                    <input [(ngModel)]="mobileNo" type="int" class="form-control" placeholder="mobile"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <br>
+                                    <select [(ngModel)]="gender" name="gender" id="gender"
+                                        style="width: 520px; height: 36px;">
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Age">Age</label>
+                                    <input [(ngModel)]="age" type="int" class="form-control" placeholder="Age"
+                                        value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button (click)="SavePersonalInfo()" class="btn btn-success">Save Personal Info</button> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <b> Address</b>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="streetadd2">Street Address-1</label>
+                                <input [(ngModel)]="streetadd1" type="text" class="form-control"
+                                    placeholder="street add 2" value="" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="streetadd1">Street Address-2</label>
+                                <input [(ngModel)]="streetadd2" type="text" class="form-control"
+                                    placeholder="street add 1" value="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="city">City</label>
+                                <input [(ngModel)]="city" type="text" class="form-control" placeholder="city"
+                                    value="" />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="state">State</label>
+                                <input [(ngModel)]="state" type="text" class="form-control" placeholder="state"
+                                    value="" />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pincode">Pincode</label>
+                                <input [(ngModel)]="pincode" type="int" class="form-control" placeholder="pincode"
+                                    value="" />
+                            </div>
+
+                            <br>
+                            <br>
+                            <label for="location">Location :</label>
+                            <button (click)="currentLocation()" class="btn btn-primary btn-sm"
+                                style="margin-left: 140px;"> Give your current location</button>
+                        </div>
+
+                        <!-- <button (click)="SaveAddressInfo()" class="btn btn-success">Save Address Info</button> -->
+
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+                    <button type="reset" class="btn btn-danger" style="margin-left: 50px;">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row centerrow"  style="position: fixed; overflow: hidden;">
+        <div class="searchbar align-items-center">
+            <form class="navbar-form navbar-left" role="search">
+
+                <select class="form-group radius" name="radius">
+                    <option *ngFor="let rad of radius; let i = index" value="{{i+1}}">{{rad}}</option>
+                </select>
+
+                <select class="form-group domain" name="domain">
+                    <option *ngFor="let dom of domain; let i = index" value="{{i+1}}">{{dom}}</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary" style="border-radius: 5px; margin-left: 25px;">
+                    Search </button>
+            </form>
+        </div>
+        <!-- <div>
+            <button (click)="nearme()" class="btn btn-primary shortcutbtn">Near me</button>
+            <button (click)="threeplusrating()" class="btn btn-primary shortcutbtn">3+ Rating</button>
+            <button (click)="offershotel()" class="btn btn-primary shortcutbtn">Offers</button>
+            <button (click)="savefourtyplusper()" class="btn btn-primary shortcutbtn">Save 40+%</button>
+            <button class="btn btn-primary shortcutbtn">Offers</button>
+        </div>
+        <hr style="width: 1400px ; right: 50px;"> -->
+    </div>
+    <br><br><br><br>
+    <div class="grid">
+        <a href="client/home/shopsaroundyou"  *ngFor="let image of images"><img [src]="image" class="img-thumbnail square" alt="..."></a>
+    </div>
+</div>

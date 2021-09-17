@@ -1,0 +1,10 @@
+.reviewbox{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.reviewbox::-webkit-scrollbar{
+    width: 0px;
+    display: none;
+}

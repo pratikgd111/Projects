@@ -1,0 +1,126 @@
+/* label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card-container.card {
+    max-width: 400px !important;
+    padding: 40px 40px;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  } */
+
+
+
+
+
+  .smallintro{
+
+    margin-top: 180px; 
+    margin-left: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+
+
+  .relative {
+    position: static;
+    height: 740px; 
+    background-image: url("https://as1.ftcdn.net/jpg/02/33/18/06/500_F_233180697_AupKIcXxASHYocLPkkGdLptYZzcPQYSR.jpg");
+}
+.teklif{
+color:#000;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    box-shadow: -2px -2px 7px 5px rgba(8, 8, 8, 0.62);
+    padding: 45px;
+
+        border-radius: 10px;
+        background: white;
+}
+
+.wc-social-login a.button-social-login {
+  text-align: center;
+  text-shadow: none;
+  line-height: normal;
+  width: 150px;
+  font-weight: 500;
+  border: 0;
+  margin: 0 0 1em;
+  padding: 6px 0;
+  box-shadow: none;
+  display: block;
+  border-radius: 3px;
+  color: #fff;
+}
+/* .wc-social-login a.button-social-login .si {
+  color: #fff;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  background-size: 1.75em;
+  background-color: transparent;
+  border-radius: 0;
+} */
+.wc-social-login .button-social-login-facebook{
+  background: #3b5998;
+  float: left;
+}
+.wc-social-login .button-social-login-google{
+  background: #DA4735;
+  float: right;
+}
+.wc-social-login .arac-icon{
+  width: 20px;
+  margin-right: 10px;
+}
+.wc-social-login-divider {
+  text-align: center;
+  overflow: hidden;
+}
+.wc-social-login-divider span {
+  display: inline-block;
+  position: relative;
+}
+.wc-social-login-divider span:before {
+  right: 100%;
+  margin-right: 15px;
+  background: black;
+}
+
+.wc-social-login-divider span:after {
+  left: 100%;
+  margin-left: 15px;
+  background: black;
+}
+.wc-social-login-divider span:after, .wc-social-login-divider span:before {
+  content: ' ';
+  position: absolute;
+  width: 600px;
+  height: 1px;
+  background: #eee;
+  top: 13px;
+}

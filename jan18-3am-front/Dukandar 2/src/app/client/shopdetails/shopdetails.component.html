@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navStyle">
+  <!-- <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a> -->
+  <a class="brand-navbar" href="#">
+    <h3 style="color: whitesmoke;">DUKANDAR</h3>
+  </a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+    <span><i class="fas fa-align-right iconStyle"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainMenu">
+    <ul class="navbar-nav ml-auto navList">
+      <li class="nav-item active"><a href="#" class="nav-link">
+          <fa-icon [icon]="faHome"></fa-icon>HOME<span class="sr-only">(current)</span>
+        </a></li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <fa-icon [icon]="faSearch"></fa-icon> Search
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">
+          <fa-icon [icon]="faUser"></fa-icon> About
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/client/profile-card" class="nav-link">
+          <fa-icon [icon]="faUser"></fa-icon> Profile
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a (click)="OnLogout()" class="nav-link"><i class="fas fa-phone"></i>Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="mainbox">
+
+  <div class="cover-photo">
+    <img src="{{shopInfo[3][0]['photo']}}"
+      style="width: 980px; height: 250px;" alt="">
+  </div>
+
+  <div class="container">
+    <div class="row row-full">
+
+
+      <div class="col-md-3 leftcol">
+        <div class="profile-avatar">
+          <div class="inner">
+            <img src="{{shopInfo[3][1]['photo']}}"
+              style="width: 206px;height: 206px;" alt="">
+          </div>
+          <h4>{{shopInfo[0]['shopName']}}</h4>
+          <h6>{{shopInfo[1]['firstName']}}  {{shopInfo[1]['lastName']}}</h6>
+          Rating
+          <div *ngFor="let i of [].constructor(shopInfo[4]['average_rating'])" style="float: right;">
+           <h4>⭐</h4> 
+        </div>
+        </div>
+        <br><br><br><br>
+
+
+
+      </div>
+
+
+      <div class="col-md-6 centercol">
+
+        <nav class="profile-nav">
+          <ul class="nav nav-pills shortcutnavmenu">
+            <li><a href="/client/shopdetails/shopinfo?shopId={{shopId}}">Home</a></li>
+            <li><a href="/client/shopdetails/showposts?shopId={{shopId}}">Post</a></li>
+            <li><a href="/client/shopdetails/shopreviews?shopId={{shopId}}">Reviews</a></li>
+            <li><a href="/client/shopdetails/add-review?shopId={{shopId}}">AddReviews</a></li>
+            <li><a href="/client/shopdetails/add-query?shopId={{shopId}}">AddQuery</a></li>
+          </ul>
+        </nav>
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+
+      <div class="col-md-3 rightcol">
+        <h4 style="margin-left: 30px;">Shop Images</h4>
+        <div class="slide-container">
+          <img *ngFor="let photo of shopInfo[3]" src="{{photo['photo']}}"
+            style="width: 300px; height: 300px;" />
+         
+        </div>
+      </div>
+
+      <!-- <div class="container"> 
+      <div id="carousel-demo" 
+           class="carousel slide" 
+           data-ride="carousel"> 
+          <div class="carousel-inner"> 
+              <div class="item"> 
+                  <img src="https://static.toiimg.com/thumb/msid-58475411,width-748,height-499,resizemode=4,imgsize-142947/.jpg" style="width: 300px; height: 300px;"> 
+              </div> 
+              <div class="item"> 
+                  <img src="https://killerattitudestatus.in/wp-content/uploads/2019/12/gud-night-images.jpg" style="width: 300px; height: 300px;"> 
+              </div> 
+              <div class="item active"> 
+                  <img src="https://images.freeimages.com/images/small-previews/5c6/sunset-jungle-1383333.jpg" style="width: 300px; height: 300px;"> 
+              </div> 
+          </div> 
+          <a class="left carousel-control"
+             href="#carousel-demo"
+             data-slide="prev"> 
+              <span class="glyphicon glyphicon-chevron-left"> 
+            </span> 
+          </a> 
+          <a class="right carousel-control" 
+             href="#carousel-demo" 
+             data-slide="next"> 
+              <span class="glyphicon glyphicon-chevron-right"> 
+            </span> 
+          </a> 
+      </div> 
+  </div>  -->
+
+
+
+
+    </div>
+  </div>
+</div>

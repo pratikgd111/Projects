@@ -1,0 +1,22 @@
+<br>
+<div class="container">
+    <div class="box">
+        <div >
+
+            <h4>Upload Shop Photos</h4>
+            <input style="display:none" type="file" (change)="onFileChanged($event)" #fileInput>
+            <button style="margin:1%" class="btn btn-sm btn-success" (click)="fileInput.click()">Select
+                File</button>
+            <button class="btn btn-sm btn-success" (click)="onUpload()">Upload!</button>
+            <button style="margin-right: 40px;" class="btn btn-sm btn-warning float-right" (click)="onNext()">Next</button>
+            <br>
+            <br>
+            <br>
+            <div  class="row">
+                <img style="margin-bottom: 40px; border-radius: 20px; " height="300px"  *ngFor="let photo of photos" class="col-md-4" src="{{photo['photo']}}" alt="">
+            </div>
+
+
+        </div>
+    </div>
+</div>
